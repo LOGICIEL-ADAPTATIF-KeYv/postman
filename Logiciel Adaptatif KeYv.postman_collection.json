@@ -68,13 +68,22 @@
 					"request": {
 						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John\",\r\n    \"firstName\": \"Pork\",\r\n    \"email\": \"john.pork@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{client_url}}/1",
+							"raw": "{{client_url}}/6626115bf8567dd46f0dbb88",
 							"host": [
 								"{{client_url}}"
 							],
 							"path": [
-								"1"
+								"6626115bf8567dd46f0dbb88"
 							]
 						}
 					},
@@ -86,9 +95,111 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{client_url}}/1",
+							"raw": "{{client_url}}/661e4921adf0d05068ac4683",
 							"host": [
 								"{{client_url}}"
+							],
+							"path": [
+								"661e4921adf0d05068ac4683"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Nom du produit\",\r\n  \"stock\": 100,\r\n  \"photo\": \"url_de_la_photo.jpg\",\r\n  \"price\": 29.99,\r\n  \"invoices\": [\"ID_de_la_facture_1\", \"ID_de_la_facture_2\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_url}}",
+							"host": [
+								"{{product_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product_url}}",
+							"host": [
+								"{{product_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product_url}}/1",
+							"host": [
+								"{{product_url}}"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Nom du produit\",\r\n  \"stock\": 100,\r\n  \"photo\": \"url_de_la_photo.jpg\",\r\n  \"price\": 29.99,\r\n  \"invoices\": [\"ID_de_la_facture_1\", \"ID_de_la_facture_2\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_url}}/662617246b7d8b41b7ebf0d9",
+							"host": [
+								"{{product_url}}"
+							],
+							"path": [
+								"662617246b7d8b41b7ebf0d9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{product_url}}/1",
+							"host": [
+								"{{product_url}}"
 							],
 							"path": [
 								"1"
@@ -161,13 +272,22 @@
 					"request": {
 						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clientReference\": \"ID_du_client_modifié\",\r\n  \"emissionDate\": \"2024-04-25T12:00:00.000Z\",\r\n  \"isPaid\": true,\r\n  \"paymentDate\": \"2024-04-26T12:00:00.000Z\",\r\n  \"price\": 150.00,\r\n  \"products\": [\"ID_du_produit_3\", \"ID_du_produit_4\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{receipt_url}}/1",
+							"raw": "{{receipt_url}}/662618a5f3dcd2837d08fc6a",
 							"host": [
 								"{{receipt_url}}"
 							],
 							"path": [
-								"1"
+								"662618a5f3dcd2837d08fc6a"
 							]
 						}
 					},
@@ -182,99 +302,6 @@
 							"raw": "{{receipt_url}}/1",
 							"host": [
 								"{{receipt_url}}"
-							],
-							"path": [
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Product",
-			"item": [
-				{
-					"name": "Create Product",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"John\",\r\n  \"firstName\": \"Doe\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"creationDate\": \"2024-04-16\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{product_url}}",
-							"host": [
-								"{{product_url}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List All Products",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{product_url}}",
-							"host": [
-								"{{product_url}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Product By ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{product_url}}/1",
-							"host": [
-								"{{product_url}}"
-							],
-							"path": [
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update Product",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"url": {
-							"raw": "{{product_url}}/1",
-							"host": [
-								"{{product_url}}"
-							],
-							"path": [
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Remove Product",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{product_url}}/1",
-							"host": [
-								"{{product_url}}"
 							],
 							"path": [
 								"1"
